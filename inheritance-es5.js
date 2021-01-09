@@ -38,7 +38,7 @@ B.prototype.getChildClass = function () {
   return this.childClass;
 };
 
-let b = new B("Sunny", "Xth");
+let b = new B('Sunny', 'Xth');
 
 b instanceof B; //true
 b instanceof A; // true
