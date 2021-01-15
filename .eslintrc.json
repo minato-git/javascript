@@ -1,7 +1,15 @@
 {
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
-  "rules": {
-    "prettier/prettier": ["error"]
-  }
+  "overrides": [
+    {
+      "files": ["*.js", "*.ts", "*.json", "*.jsx", "*.tsx"],
+      "rules": {
+        "no-plusplus": "off",
+        "no-extend-native": "off",
+        "no-unused-expressions": "off",
+        "no-underscore-dangle": "off"
+      }
+    }
+  ]
 }

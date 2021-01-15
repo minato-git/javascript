@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-plusplus */
 // Iterative approach
-function searchNodeInTreeIterative(tree, node) {
+const searchNodeInTreeIterative = (tree, node) => {
   if (tree == null || tree === undefined) {
     throw new Error('Cannot search in null or undefined DOM tree');
   }
@@ -13,18 +15,17 @@ function searchNodeInTreeIterative(tree, node) {
     const elem = stack.pop();
     if (elem === node) {
       return elem;
-    } else {
-      for (let i = 0; i < elem.childNodes.length; i++) {
-        stack.push(elem.childNodes[i]);
-      }
+    }
+    for (let i = 0; i < elem.childNodes.length; i++) {
+      stack.push(elem.childNodes[i]);
     }
   }
   return null;
-}
+};
 
 // Recursive approach
-function searchNodeInTreeRecursive(tree, node) {
-  if (tree == null || tree == undefined) {
+const searchNodeInTreeRecursive = (tree, node) => {
+  if (tree == null || tree === undefined) {
     return null;
   }
   if (tree === node) {
@@ -35,4 +36,4 @@ function searchNodeInTreeRecursive(tree, node) {
     result = searchNodeInTreeRecursive(tree.childNodes[i], node);
   }
   return result;
-}
+};
